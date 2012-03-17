@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <!-- Dependencies -->
+
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1/underscore-min.js"></script>
+        <script type="text/javascript" src="lib/sensei-client.js"></script>
+        <script type="text/javascript" src="jquery.sensei.js"></script>
+        <script type="text/javascript" src="jquery.sensei.renderer.js"></script>
+        <script type="text/javascript" src="jquery.sensei.pagination.js"></script>
+
+
+        <script>
+            $(document).ready(function(){
+                var renderer =  $("#results").SenseiRenderer();
+                var paginator = $("#pagination").SenseiPagination();
+                
+                $("#query").senseiUI({ listeners: [renderer, paginator]});
+
+                
+            });
+        </script>
+    </head>
+
+    <body>
+        <h3>search sensei's cars example</h3>
+        <form id="myform" action="ignored.html">
+            <input id="query" type="text"/>
+        </form>
+
+        <div id="results"></div>
+        <div id="pagination"></div>
+
+    </body>
+</html>
